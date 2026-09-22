@@ -6,24 +6,22 @@ public class triangle
    {
       Scanner sc = new Scanner(System.in);
 
-      System.out.print("Enter side a: ");
-      int a = sc.nextInt();
-
-      System.out.print("Enter side b: ");
-      int b = sc.nextInt();
-
-      System.out.print("Enter side c: ");
-      int c = sc.nextInt();
-
-      if (a * a + b * b == c * c)
-      {
-         System.out.println("Right triangle: true");
+      System.out.print("Enter side 1: ");
+      int side1 = sc.nextInt();
+      System.out.print("Enter side 2: ");
+      int side2 = sc.nextInt();
+      System.out.print("Enter Side 3: ");
+      int side3 = sc.nextInt();
+      
+      if (Math.pow(side1,2) + Math.pow(side2,2) == Math.pow(side3,2)) {
+         System.out.println("Right Triangle");   
+      } if (Math.pow(side3,2) + Math.pow(side2,2) == Math.pow(side1,2)) {
+         System.out.println("Right Triangle");   
+      } if (Math.pow(side1,2) + Math.pow(side3,2) == Math.pow(side2,2)) {
+         System.out.println("Right Triangle");   
+      } else {
+        System.out.println("Not Right Triangle");
       }
-      else
-      {
-         System.out.println("Right triangle: false");
-      }
-
       sc.close();
    }
 }
