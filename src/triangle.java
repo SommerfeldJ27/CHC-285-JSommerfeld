@@ -12,7 +12,17 @@ public class triangle
       int side2 = sc.nextInt();
       System.out.print("Enter Side 3: ");
       int side3 = sc.nextInt();
-      
+
+      if 
+      (side1 > side2 && side1 > side3)
+         System.out.print("The Hypotenuse is: Side 1 ");
+      if
+      (side2 > side1 && side2 > side3)
+         System.out.print("The Hypotenuse is: Side 2 ");
+      if
+      (side3 > side1 && side3 > side2)
+         System.out.print("The Hypotenuse is: Side 3 ");
+
       if
       (Math.pow(side1,2) + Math.pow(side2,2) == Math.pow(side3,2) || 
       (Math.pow(side3,2) + Math.pow(side2,2) == Math.pow(side1,2) || 
