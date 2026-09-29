@@ -15,13 +15,13 @@ public class triangle
 
       if 
       (side1 > side2 && side1 > side3)
-         System.out.print("The Hypotenuse is: Side 1 ");
+         System.out.println("The Hypotenuse is Side 1: " + side1);
       if
       (side2 > side1 && side2 > side3)
-         System.out.print("The Hypotenuse is: Side 2 ");
+         System.out.println("The Hypotenuse is Side 2: " + side2);
       if
       (side3 > side1 && side3 > side2)
-         System.out.print("The Hypotenuse is: Side 3 ");
+         System.out.println("The Hypotenuse is Side 3: " + side3);
 
       if
       (Math.pow(side1,2) + Math.pow(side2,2) == Math.pow(side3,2) || 
