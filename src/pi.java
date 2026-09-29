@@ -1,19 +1,18 @@
 import java.util.Scanner;
-
-public class pi {
-    public static void main(String[] args) {
+public class pi
+{
+    public static void main(String[] args)
+    {
         Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter number of terms for the series: ");
+        System.out.print("Enter your N value: ");
         int N = sc.nextInt();
-
         double sum = 0;
-        for (int i = 1; i <= N; i++) {
-            double term = 1 / (2 * i - 1);
-            if (i % 2 == 0) term = -term;
+        for (int i = 0; i < N; i++) {
+            double term = Math.pow(-1, i) / (2 * i + 1);
             sum += term;
         }
-        System.out.println("Approx pi/4: " + sum);
-        System.out.println("Actual pi/4: " + (Math.PI / 4));
+        System.out.println("The approximation for pi/4 is " + sum);
+        System.out.println("The real value for pi/4 is " + (Math.PI / 4));
+        sc.close();
     }
 }
