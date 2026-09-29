@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class triangle
+public class triangleJAS
 {
    public static void main(String[] args)
    {
