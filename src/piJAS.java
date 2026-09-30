@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class pi
+public class piJAS
 {
     public static void main(String[] args)
     {
