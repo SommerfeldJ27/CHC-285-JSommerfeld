@@ -1,33 +1,17 @@
 import java.util.Scanner;
-
 public class powersJAS {
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
-
-        int power;
-
-        do {
-            System.out.print("What power? ");
-            power = sc.nextInt();
-
-            if (power == -1) {
-                System.out.println("stop");
-            } 
-            else {
-                int result = 1;
-                int count = 0;
-
-                do {
-                    result = result * 2;
-                    count++;
-                } while (count < power);
-
-                System.out.println(result);
+        System.out.print("Enter your power: ");
+        int num = sc.nextInt();
+        while (num != -1) {
+            int prod = 1;
+            for (int i = 1; i <= num; i++) {
+                prod *= 2;
             }
-
-        } while (power != -1);
-
-        sc.close();
+            System.out.println(num + " " + prod);
+            System.out.print("Enter your power: ");
+            num = sc.nextInt();
+        }
     }
 }
