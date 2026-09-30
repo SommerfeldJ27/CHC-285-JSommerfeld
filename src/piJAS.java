@@ -10,8 +10,7 @@ public class piJAS
         double sum = 0;
         for (int i = 0; i < N; i++)
         {
-            double term = Math.pow(-1, i) / (2 * i + 1);
-            sum += term;
+            sum += Math.pow(-1, i) / (2 * i + 1);
         }
         System.out.println("The approximation for pi/4 is " + sum);
         System.out.println(Math.abs(sum - Math.PI/4) < e);
