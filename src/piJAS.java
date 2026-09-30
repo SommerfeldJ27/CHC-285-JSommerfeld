@@ -5,6 +5,7 @@ public class pi
     {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter your N value: ");
+        double e = .000001;
         int N = sc.nextInt();
         double sum = 0;
         for (int i = 0; i < N; i++)
@@ -13,6 +14,7 @@ public class pi
             sum += term;
         }
         System.out.println("The approximation for pi/4 is " + sum);
+        System.out.println(Math.abs(sum - Math.PI/4) < e);
         sc.close();
     }
 }
