@@ -13,5 +13,6 @@ public class powersJAS {
             System.out.print("Enter your power: ");
             num = sc.nextInt();
         }
+        sc.close();
     }
 }
