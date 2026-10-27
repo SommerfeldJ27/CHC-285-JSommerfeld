@@ -1,107 +1,59 @@
 import java.util.Scanner;
-public class wow	
+public class wow
 {
-	Scanner sc = new Scanner(System.in);	
-	public static void main(String[] args)
-		{
-	// Input Telephone Number and Strip Excess Characters
-			String phonenum = sayHello(); 
-			System.out.println("The original telephone number was " + phonenum);
-			String newtn = remove(phonenum);
-			System.out.println("The new telephone number was " + newtn);
-	
-	// Check Length
-			if (checkLength(newtn)==false)
-			{
-				System.out.println("The original telephone number of length " + newtn.length() + " was not the correct length." );
-				System.exit(0);
-			}
-			
-	// Check Parentheses and Dash	
-			if (checkPosition(newtn)==false || checkRParen(newtn)==false)
-			{
-				System.out.println("The original telephone number did not have the parenthesis or dash in the correct position");
-				System.exit(0);
-			}
-			
-			checkDash(newtn);
-			
-	// Break Up and Print the Telephone Number
-			String ac = newtn.substring(1,4);
-			String ex = newtn.substring(5,8);
-			String ln = newtn.substring(9);
-			printOutput(newtn, ac, ex, ln);
-		}
-		
-		
-		
-		
-		
-		
-		
-		
-///methods	
-//********************************************************
-	static String sayHello()
-	{
-			System.out.println("Please enter the original telephone number: ");
-			String input = inputPhoneNum();
-			return input;
-	}
-	
-//********************************************************	
-	static String inputPhoneNum()
-	{
-			return (sc.readLine());
-	}
-	
-//********************************************************
-	static String remove(String x)
-	{
-		String newtn = "";
-			for(int n=0; n<x.length(); n++)
-			{
-				if ((x.charAt(n) >= '0' && x.charAt(n) <= '9') || (x.charAt(n) == '(') || (x.charAt(n) == ')') || (x.charAt(n) == '-'))
-				newtn+=x.charAt(n);
-			}
-			return newtn;
-	}
-	
-//********************************************************	
-	static boolean checkLength(String x)
-	{
-		boolean c = (x.length() == 13);
-		return c;
-	}
-	
-//********************************************************
-	static boolean checkPosition(String x)
-	{
-		boolean d = (x.charAt(0) == '(');
-		return d;
-	}
-	static boolean checkRParen(String x)
-	{
-		boolean e = (x.charAt(4) == ')');
-		return e;
-	}
-	
-//********************************************************
-	static void checkDash(String x)
-	{
-			if (x.charAt(8) != '-')
-			{
-				System.out.println("The original telephone number did not have the parenthesis or dash in the correct position");
-				System.exit(0);
-			}
-	}
-	
-//********************************************************
-		static void printOutput(String newtn, String ac, String ex, String ln)
-	{
+    static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        String phone = inputPhoneNum();
+        System.out.println("You Input Your Number As: " + phone);
+        String newPhone = remove(phone);
+        System.out.println("The Phone Number Is: " + newPhone);
 
-			System.out.print("The area code is " + ac);
-			System.out.print(", the exchange is " + ex);
-			System.out.println(" and the line number is " + ln);
-		}
+        if (checkLength(newPhone) == false)
+        {
+            System.out.println("Invalid Phone Number Please Try Again.");
+            return;
+        }
+
+        String areacode = newPhone.substring(0, 3);
+        String exchange = newPhone.substring(3, 6);
+        String linenumber = newPhone.substring(6, 10);
+
+        printOutput(areacode, exchange, linenumber);
+
+        sc.close();
+    }
+
+    private static String inputPhoneNum()
+    {
+        System.out.print("Enter Phone Number: ");
+        return sc.nextLine().strip();
+    }
+
+    private static String remove(String phone)
+    {
+        String newPhone = "";
+
+        for (int i = 0; i < phone.length(); i++)
+        {
+            char num = phone.charAt(i);
+
+            if (num >= '0' && num <= '9')
+            {
+                newPhone += num;
+            }
+        }
+
+        return newPhone;
+    }
+
+    private static boolean checkLength(String phone)
+    {
+        return phone.length() == 10;
+    }
+
+    private static void printOutput(String areacode, String exchange, String linenumber)
+    {
+        System.out.println("The area code is " + areacode + ", the exchange is " + exchange + " and the line number is " + linenumber);
+    }
 }
