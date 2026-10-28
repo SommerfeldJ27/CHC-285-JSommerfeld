@@ -48,8 +48,9 @@ public class PhoneMethodsJAS
             System.out.println("Uh oh: Dash isn't in the right spot");
             System.out.println("It should look something like this: (xxx)xxx-xxxx");
         }
-        else
-        {
+    }
+    public static void printOutput(String newPhone)
+    {
             String areaCode = newPhone.substring(1, 4);
             String exchange = newPhone.substring(5, 8);
             String lineNumber = newPhone.substring(9, 13);
@@ -58,6 +59,5 @@ public class PhoneMethodsJAS
             System.out.println("Exchange: " + exchange);
             System.out.println("Line number: " + lineNumber);
             System.out.println("Phone number: " + newPhone);
-        }
     }
 }
