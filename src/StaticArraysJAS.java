@@ -22,8 +22,10 @@ public class StaticArraysJAS
         Arrays.sort(list2);
 
         //Print method call
+        System.out.print("list1: ");
         printList(list1);
         System.out.println(); //Gives space in between work for termina readablility
+        System.out.print("list2: ");
         printList(list2);
         System.out.println(); //Gives space in between work for termina readablility
 
