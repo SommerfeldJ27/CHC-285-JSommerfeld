@@ -1,0 +1,12 @@
+Method 1:
+1 <= x <= 6
+0 <= x < 6
+1 <= x < 7
+int (math.random() * 6) + 1
+
+Method 2:
+//Random is a method class, nextInt(), Like Scanner//
+Random rnd = new Random();
+int num = rnd.nextInt(6) + 1;
+
+Upcoming: try-catch functions (Python: try-except)
