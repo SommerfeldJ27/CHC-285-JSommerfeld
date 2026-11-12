@@ -1,5 +1,6 @@
 import java.util.Scanner;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
 public class ArrayListJAS
 {
     public static void main(String[] args)
@@ -14,41 +15,8 @@ public class ArrayListJAS
             option = sc.nextLine();
             list.add(option);
         }
-
-        Arrays.sort(list);
+        sc.close();
+        Collections.sort(list);
         System.out.println(list);
     }
 }
-"
-        //Print method call
-
-        System.out.print("list2: ");
-        printList(list2);
-        System.out.println(); //Gives space in between work for termina readablility
-
-        //Average method call
-        System.out.println("list1 Average: " + AverageList(list1));
-        System.out.println("list2 Average: " + AverageList(list2));
-
-    }
-
-    public static void printList(int[] list)
-    {
-        for(int i = 0; i < list.length; i++)
-        {
-            System.out.print(list[i] + " ");
-        }
-    }
-
-    public static double AverageList(int[] list)
-    {
-        double sum = 0, avg = 0;
-        for (int i = 0; i < list.length; i++)
-        {
-            sum = sum + list[i];
-        }
-        avg = sum / list.length;
-        return avg;
-    }
-}
-"
