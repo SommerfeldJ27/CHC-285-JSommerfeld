@@ -31,6 +31,7 @@ public class ArrayListJAS
                 newlist.add(word);
             }
         }
+        Collections.sort(newlist);
 
         // Step 3
         System.out.println(newlist);
