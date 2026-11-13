@@ -22,7 +22,7 @@ public class ArrayListJAS
 
         // Step 2
         ArrayList <String> newlist = new ArrayList <String>();
-        System.out.print("Enter a word length: ");
+        System.out.print("Pull words with length: ");
         int num = sc.nextInt();
         for (String word : list)
         {
