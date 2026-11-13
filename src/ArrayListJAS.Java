@@ -41,7 +41,7 @@ public class ArrayListJAS
             System.out.println(newlist);
         }
         sc.close();
-        
+
         System.out.print("Initial List: ");
         System.out.println(list);
         System.out.print("New List: ");
