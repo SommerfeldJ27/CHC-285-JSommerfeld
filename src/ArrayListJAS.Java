@@ -5,18 +5,44 @@ public class ArrayListJAS
 {
     public static void main(String[] args)
     {
-        ArrayList <String> list = new ArrayList <String>();
-        //Static list created by user input
         Scanner sc = new Scanner(System.in);
+        
+        // Step 1
+        ArrayList <String> list = new ArrayList <String>();
+        System.out.print("Enter a word: ");
         String option = sc.nextLine();
-        while (option != ("Stop"))
+        while (!option.equals("Stop"))
         {
             System.out.print("Enter a word: ");
-            option = sc.nextLine();
             list.add(option);
+            option = sc.nextLine();
         }
-        sc.close();
         Collections.sort(list);
         System.out.println(list);
+
+        // Step 2
+        ArrayList <String> newlist = new ArrayList <String>();
+        System.out.print("Enter a word length: ");
+        int num = sc.nextInt();
+        for (String word : list)
+        {
+            if (word.length() == num)
+            {
+                newlist.add(word);
+            }
+        }
+
+        // Step 3
+        System.out.println(newlist);
+        while (!newlist.isEmpty())
+        {
+            newlist.remove(0);
+        }
+
+        sc.close();
+        System.out.print("Initial List: ");
+        System.out.println(list);
+        System.out.print("New List: ");
+        System.out.println(newlist);
     }
 }
