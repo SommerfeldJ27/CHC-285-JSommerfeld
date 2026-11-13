@@ -11,7 +11,7 @@ public class ArrayListJAS
         ArrayList <String> list = new ArrayList <String>();
         System.out.print("Enter a word: ");
         String option = sc.nextLine();
-        while (!option.equals("Stop"))
+        while (!option.equals("stop"))
         {
             System.out.print("Enter a word: ");
             list.add(option);
